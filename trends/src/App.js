@@ -10,9 +10,11 @@ import { ChakraProvider } from '@chakra-ui/react';
 function App() {
   return (
     <div>
+       <Header/>
       <Routes>
+       
         <Route path="/" element={<Home />} />
-        <Route path="/header" element = {<Header/>}/>
+
         {/* add your routes */}
       </Routes>
       <Footer />

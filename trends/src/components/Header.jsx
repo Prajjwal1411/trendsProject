@@ -1,17 +1,21 @@
 import { Box, Flex, Image, Spacer, Button, IconButton, HStack } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import logo from "../media/logo.svg";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <Box as="header" px={6} py={4} background="black" borderBottom="1px solid" borderColor="gray.700">
       <Flex alignItems="center">
         {/* Logo Section */}
-        <Image 
-          src={logo}
-          alt="BetterMe Logo"
-          boxSize="80px" // Increased logo size
-        />
+        
+        <Link to="/">
+            <Image 
+                src={logo}
+                alt="BetterMe Logo"
+                boxSize="80px" 
+            />
+        </Link>
 
         <Spacer />
 
