@@ -23,7 +23,7 @@ export default function Header() {
         {/* Navigation Links */}
         <HStack spacing={8} display={{ base: "none", md: "flex" }}>
           <Link
-            href="/product"
+            href="/"
             fontWeight={location.pathname === "/" ? "bold" : "normal"} // Highlight "Product"
             color="white"
             _hover={{ textDecoration: "none" }}
@@ -32,7 +32,7 @@ export default function Header() {
           </Link>
           <Link
             href="/product"
-            fontWeight={location.pathname === "/products" ? "bold" : "normal"} // Highlight "Product"
+            fontWeight={location.pathname === "/product" ? "bold" : "normal"} // Highlight "Product"
             color="white"
             _hover={{ textDecoration: "none" }}
           >

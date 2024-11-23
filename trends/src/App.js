@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Footer from './components/Footer';
 import Header from './components/Header';
-import { ChakraProvider } from '@chakra-ui/react';
+import ForBuisness from './components/ForBuisness';
 
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
       <Routes>
        
         <Route path="/" element={<Home />} />
+        <Route path="/for-business" element={<ForBuisness />} />
 
         {/* add your routes */}
       </Routes>
