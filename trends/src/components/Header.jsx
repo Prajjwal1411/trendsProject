@@ -1,30 +1,55 @@
-import { Box, Flex, Image, Spacer, Button, IconButton, HStack } from "@chakra-ui/react";
+import { Box, Flex, Image, Spacer, Button, IconButton, HStack, Link } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { useLocation } from "react-router-dom"; // For React Router-based routing
 import logo from "../media/logo.svg";
-import { Link } from "react-router-dom";
 
 export default function Header() {
+  const location = useLocation(); // Get the current route path
+
   return (
     <Box as="header" px={6} py={4} background="black" borderBottom="1px solid" borderColor="gray.700">
       <Flex alignItems="center">
         {/* Logo Section */}
-        
-        <Link to="/">
-            <Image 
-                src={logo}
-                alt="BetterMe Logo"
-                boxSize="80px" 
-            />
+        <Link href="/" _hover={{ textDecoration: "none" }}>
+          <Image 
+            src={logo}
+            alt="BetterMe Logo"
+            boxSize="80px"
+          />
         </Link>
 
         <Spacer />
 
-        {/* Right Section */}
-        <HStack spacing={4} display={{ base: "none", md: "flex" }}>
-          <Button size="sm" variant="link" color="white"> {/* Changed text color */}
+        {/* Navigation Links */}
+        <HStack spacing={8} display={{ base: "none", md: "flex" }}>
+          <Link
+            href="/product"
+            fontWeight={location.pathname === "/" ? "bold" : "normal"} // Highlight "Product"
+            color="white"
+            _hover={{ textDecoration: "none" }}
+          >
+            Home
+          </Link>
+          <Link
+            href="/product"
+            fontWeight={location.pathname === "/products" ? "bold" : "normal"} // Highlight "Product"
+            color="white"
+            _hover={{ textDecoration: "none" }}
+          >
+            Product
+          </Link>
+          <Link
+            href="/for-business"
+            fontWeight={location.pathname === "/for-business" ? "bold" : "normal"} // Highlight "For Business"
+            color="white"
+            _hover={{ textDecoration: "none" }}
+          >
+            For Business
+          </Link>
+          <Button size="sm" variant="link" color="white">
             Privacy policy
           </Button>
-          <Button size="sm" variant="outline" color="white" borderColor="white"> {/* Adjusted button text and border */}
+          <Button size="sm" variant="outline" color="white" borderColor="white">
             Log in
           </Button>
         </HStack>
@@ -36,7 +61,7 @@ export default function Header() {
           size="sm"
           display={{ base: "flex", md: "none" }}
           variant="ghost"
-          color="white" // Changed menu icon color
+          color="white"
         />
       </Flex>
     </Box>
