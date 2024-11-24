@@ -1,3 +1,6 @@
+// Created by Anetia Faber(8917618)
+
+
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

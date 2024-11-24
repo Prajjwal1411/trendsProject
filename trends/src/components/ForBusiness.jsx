@@ -13,7 +13,7 @@ import {
   } from "@chakra-ui/react";
  
   
-  export default function ForBuisness() {
+  export default function ForBusiness() {
     return (
       <Box>
   

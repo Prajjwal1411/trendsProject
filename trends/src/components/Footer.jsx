@@ -1,3 +1,6 @@
+// Created by Anetia Faber(8917618)
+
+
 import React from "react";
 import logo from "../media/logo.svg";
 import linkedinlogo from "../media/1d6993a7-6f3f-4014-967f-2e2d9db59aac.svg";
