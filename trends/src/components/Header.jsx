@@ -46,6 +46,14 @@ export default function Header() {
           >
             For Business
           </Link>
+          <Link
+            href="/about-us"
+            fontWeight={location.pathname === "/about-us" ? "bold" : "normal"} // Highlight "For About us"
+            color="white"
+            _hover={{ textDecoration: "none" }}
+          >
+            About Us
+          </Link>
           <Button size="sm" variant="link" color="white">
             Privacy policy
           </Button>
