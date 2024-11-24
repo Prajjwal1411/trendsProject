@@ -25,83 +25,90 @@ import {
 } from "react-icons/fa";
 
 export default function AboutUs() {
-  const bgColor = useColorModeValue("gray.50", "gray.800");
-  const cardBgColor = useColorModeValue("white", "gray.700");
+  const bgColor = "black"; // Set background to black
+  const cardBgColor = "black"; // Set card background to black as well
+  const headerColor = "#00b5ad"; // Set header color to #00b5ad
+  const textColor = "white"; // Set text color to white
 
   return (
-    <Box minH="100vh">
+    <Box minH="100vh" bg={bgColor} color={textColor}>
       {/* Hero Section */}
       <Box
-  position="relative"
-  minH="100vh"
-  px={[4, 6, 20]}
-  py={20}
-  display="flex"
-  alignItems="center"
->
-  <Container maxW="7xl" >
-    <Flex
-      direction={["column", "column", "row"]}
-      alignItems="center"
-      justifyContent="space-between"
-      gap={10}
-    >
-      {/* Left Content */}
-      <Box flex="1" >
-        <Heading
-          as="h1"
-          fontSize={["4xl", "5xl", "6xl", "7xl"]}
-          color="#14264E"
-          mb={8}
-          maxW="4xl"
-        >
-          Personalized holistic wellness solution
-        </Heading>
-        <Text
-          fontSize={["xl", "2xl"]}
-          color="gray.600"
-          maxW="2xl"
-          lineHeight="tall"
-        >
-          Since 2017, we have been on a mission to create a healthier world for
-          everyone, regardless of age, sex, physical ability, or background.
-        </Text>
-      </Box>
-
-      {/* Right Image */}
-      <Box
-        flex="1"
+        position="relative"
+        minH="100vh"
+        px={[4, 6, 20]}
+        py={20}
         display="flex"
-        justifyContent="center"
         alignItems="center"
       >
-       <Image
-          src="https://res.cloudinary.com/drhg6wpcy/image/upload/dpr_1.0,f_auto,q_auto:good/v1/betterme.world/about/vcard-2_lu5ha8" /* Replace with your portrait image URL */
-          alt="Holistic wellness"
-          borderRadius="2xl"
-          boxShadow="lg"
-          maxW="100%"
-          height="auto"
-          objectFit="cover"
-        />
+        <Container maxW="7xl">
+          <Flex
+            direction={["column", "column", "row"]}
+            alignItems="center"
+            justifyContent="space-between"
+            gap={10}
+          >
+            {/* Left Content */}
+            <Box flex="1">
+              <Heading
+                as="h1"
+                fontSize={["4xl", "5xl", "6xl", "7xl"]}
+                color={headerColor}
+                mb={8}
+                maxW="4xl"
+              >
+                Personalized holistic wellness solution
+              </Heading>
+              <Text
+                fontSize={["xl", "2xl"]}
+                color={textColor}
+                maxW="2xl"
+                lineHeight="tall"
+              >
+                Since 2017, we have been on a mission to create a healthier
+                world for everyone, regardless of age, sex, physical ability, or
+                background.
+              </Text>
+            </Box>
+
+            {/* Right Image */}
+            <Box
+              flex="1"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Image
+                src="https://res.cloudinary.com/drhg6wpcy/image/upload/dpr_1.0,f_auto,q_auto:good/v1/betterme.world/about/vcard-2_lu5ha8"
+                alt="Holistic wellness"
+                borderRadius="2xl"
+                boxShadow="lg"
+                maxW="100%"
+                height="auto"
+                objectFit="cover"
+              />
+            </Box>
+          </Flex>
+
+          {/* Scroll Down Indicator */}
+          <HStack
+            position="absolute"
+            bottom={10}
+            right={[4, 6, 20]}
+            color={textColor}
+            cursor="pointer"
+            _hover={{ textDecoration: "underline" }}
+          >
+            <Text fontSize="sm">Scroll Down</Text>
+            <Icon
+              as={ArrowDownIcon}
+              w={4}
+              h={4}
+              animation="bounce 1s infinite"
+            />
+          </HStack>
+        </Container>
       </Box>
-    </Flex>
-
-    {/* Scroll Down Indicator */}
-    <HStack
-      position="absolute"
-      bottom={10}
-      right={[4, 6, 20]}
-      color="gray.600"
-      cursor="pointer"
-      _hover={{ textDecoration: "underline" }}
-    >
-      <Text fontSize="sm">Scroll Down</Text>
-      <Icon as={ArrowDownIcon} w={4} h={4} animation="bounce 1s infinite" />
-    </HStack>
-  </Container>
-</Box>
-
 
       <Box px={[4, 6, 20]} py={20}>
         <Container maxW="7xl" position="relative">
@@ -129,13 +136,14 @@ export default function AboutUs() {
             left="50%"
             transform="translate(-50%, -50%)"
             textAlign="center"
-            color="white"
+            color={textColor}
           >
             <Heading
               as="h2"
               fontSize={["3xl", "4xl", "5xl"]}
               fontWeight="bold"
               mb={4}
+              color={textColor}
             >
               BetterMe: Health Coaching App
             </Heading>
@@ -146,7 +154,7 @@ export default function AboutUs() {
             </Text>
             <Button
               bg="white"
-              color="#14264E"
+              color={headerColor}
               px={8}
               py={6}
               borderRadius="full"
@@ -179,16 +187,16 @@ export default function AboutUs() {
                 transition="all 0.3s"
                 _hover={{ boxShadow: "lg" }}
               >
-                <Icon as={stat.icon} w={12} h={12} color="#14264E" mb={4} />
+                <Icon as={stat.icon} w={12} h={12} color={headerColor} mb={4} />
                 <Text
                   fontSize={["3xl", "4xl"]}
                   fontWeight="bold"
-                  color="#14264E"
+                  color={headerColor}
                   mb={2}
                 >
                   {stat.number}
                 </Text>
-                <Text color="gray.600">{stat.label}</Text>
+                <Text color={textColor}>{stat.label}</Text>
               </Box>
             ))}
           </SimpleGrid>
@@ -200,10 +208,15 @@ export default function AboutUs() {
         <Container maxW="7xl">
           <SimpleGrid columns={[1, 1, 2]} spacing={16}>
             <Box>
-              <Heading as="h2" fontSize={["3xl", "4xl"]} color="#14264E" mb={6}>
+              <Heading
+                as="h2"
+                fontSize={["3xl", "4xl"]}
+                color={headerColor}
+                mb={6}
+              >
                 Our Mission
               </Heading>
-              <Text fontSize="lg" color="gray.600" lineHeight="tall">
+              <Text fontSize="lg" color={textColor} lineHeight="tall">
                 We believe that everyone deserves access to personalized
                 wellness solutions. Through innovative technology and expert
                 guidance, we're making health and wellness accessible, engaging,
@@ -211,10 +224,15 @@ export default function AboutUs() {
               </Text>
             </Box>
             <Box>
-              <Heading as="h2" fontSize={["3xl", "4xl"]} color="#14264E" mb={6}>
+              <Heading
+                as="h2"
+                fontSize={["3xl", "4xl"]}
+                color={headerColor}
+                mb={6}
+              >
                 Our Approach
               </Heading>
-              <Text fontSize="lg" color="gray.600" lineHeight="tall">
+              <Text fontSize="lg" color={textColor} lineHeight="tall">
                 By combining cutting-edge technology with proven wellness
                 practices, we create personalized experiences that adapt to each
                 individual's needs, goals, and lifestyle. Our holistic approach
@@ -232,7 +250,7 @@ export default function AboutUs() {
           <Heading
             as="h2"
             fontSize={["3xl", "4xl"]}
-            color="#14264E"
+            color={headerColor}
             mb={12}
             textAlign="center"
           >
@@ -268,39 +286,20 @@ export default function AboutUs() {
                 transition="all 0.3s"
                 _hover={{ boxShadow: "lg" }}
               >
-                <Icon as={value.icon} w={12} h={12} color="#14264E" mb={4} />
-                <Heading as="h3" fontSize="xl" color="#14264E" mb={2}>
+                <Icon
+                  as={value.icon}
+                  w={12}
+                  h={12}
+                  color={headerColor}
+                  mb={4}
+                />
+                <Heading as="h3" fontSize="2xl" color={headerColor} mb={2}>
                   {value.title}
                 </Heading>
-                <Text color="gray.600">{value.description}</Text>
+                <Text color={textColor}>{value.description}</Text>
               </Box>
             ))}
           </SimpleGrid>
-        </Container>
-      </Box>
-
-      {/* CTA Section */}
-      <Box px={[4, 6, 20]} py={20}>
-        <Container maxW="3xl" textAlign="center">
-          <Heading as="h2" fontSize={["3xl", "4xl"]} color="#14264E" mb={6}>
-            Join Our Wellness Journey
-          </Heading>
-          <Text fontSize="lg" color="gray.600" mb={8}>
-            Experience personalized, holistic wellness tailored just for you.
-            Start your journey to a healthier, happier you today.
-          </Text>
-          <Button
-            size="lg"
-            bg="#14264E"
-            color="white"
-            px={8}
-            py={6}
-            fontSize="lg"
-            borderRadius="full"
-            _hover={{ bg: "#1e3a6d" }}
-          >
-            Get Started Now
-          </Button>
         </Container>
       </Box>
     </Box>
