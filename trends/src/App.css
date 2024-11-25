@@ -3,6 +3,8 @@
 :root {
   /* Color pallete */
   --limegreen: #b9ff38;
+  --dark: #000000;
+  --text: #ffffff;
 }
 
 .App {
@@ -82,7 +84,7 @@
 }
 
 .btn-get-started {
-  background-color: #ffffff;
+  background-color: var(--text);
   color: black;
   font-size: 1.3rem;
   font-weight: 600;
@@ -109,7 +111,7 @@
 }
 
 .grid-item {
-  color: #ffffff;
+  color: var(--text);
   padding: 40px;
   text-align: center;
 }
@@ -197,7 +199,7 @@
   padding: 20px 40px 40px;
   background-color: #2e2d2d;
   text-align: center;
-  color: #fff;
+  color: var(--text);
 }
 
 .featured-programs h2 {
@@ -230,7 +232,7 @@
 .program-card h3 {
   font-size: 1.5rem;
   margin-top: 20px;
-  color: #000;
+  color: var(--dark);
 }
 
 .program-card p {
@@ -250,7 +252,7 @@
   transform: translateX(-50%);
   padding: 10px 20px;
   background-color: rgba(255, 255, 255, 0.7);
-  color: #000;
+  color: var(--dark);
   border: none;
   border-radius: 5px;
   font-size: 1rem;
@@ -371,8 +373,8 @@
 
 /* Footer */
 .footer {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--dark);
+  color: var(--text);
   padding: 55px 60px 30px;
   text-align: left;
 }
@@ -401,13 +403,13 @@
 
 .footer-email {
   font-size: 0.9rem;
-  color: #fff;
+  color: var(--text);
   margin-bottom: 12px;
   text-decoration: none;
 }
 
 .footer-email:hover {
-  color: #fff;
+  color: var(--text);
   text-decoration: underline;
 }
 
@@ -423,7 +425,7 @@
 .footer-header {
   font-size: 1rem;
   margin-bottom: 10px;
-  color: #fff;
+  color: var(--text);
 }
 
 .footer-item {
@@ -476,7 +478,7 @@
 }
 
 .footer-link:hover {
-  color: #fff;
+  color: var(--text);
   text-decoration: underline;
 }
 
