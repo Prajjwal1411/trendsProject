@@ -1,10 +1,13 @@
+// Created by Prajjwal Shukla (8910064)
+
+
+
 import { Box, Flex, Image, Spacer, Button, IconButton, HStack, Link } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { useLocation } from "react-router-dom"; // For React Router-based routing
-import logo from "../media/logo.svg";
+import { useLocation } from "react-router-dom";
 
 export default function Header() {
-  const location = useLocation(); // Get the current route path
+  const location = useLocation(); 
 
   return (
     <Box as="header" px={6} py={4} background="black" borderBottom="1px solid" borderColor="gray.700">
