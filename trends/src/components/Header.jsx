@@ -31,12 +31,20 @@ export default function Header() {
             Home
           </Link>
           <Link
-            href="/product"
-            fontWeight={location.pathname === "/product" ? "bold" : "normal"} // Highlight "Product"
+            href="/blog"
+            fontWeight={location.pathname === "/blog" ? "bold" : "normal"} // Highlight "blog"
             color="white"
             _hover={{ textDecoration: "none" }}
           >
-            Product
+            Blog
+          </Link>
+          <Link
+            href="/affiliate"
+            fontWeight={location.pathname === "/affiliate" ? "bold" : "normal"} // Highlight "For FAQs"
+            color="white"
+            _hover={{ textDecoration: "none" }}
+          >
+            Affiliate Program
           </Link>
           <Link
             href="/for-business"

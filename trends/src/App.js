@@ -10,6 +10,8 @@ import Header from './components/Header';
 import ForBusiness from './components/ForBusiness';
 import AboutPage from './components/AboutUs';
 import FAQPage from './components/FAQPage';
+import BlogPage from './components/blog';
+import Affiliate from './components/affiliate';
 
 
 function App() {
@@ -22,7 +24,9 @@ function App() {
         <Route path="/for-business" element={<ForBusiness />} />
         <Route path = "/about-us" element= {<AboutPage />} />
         <Route path = "/faq" element= {<FAQPage />} />
-
+        <Route path = "/blog" element= {<BlogPage />} />
+        <Route path = "/affiliate" element= {<Affiliate />} />
+        
         {/* add your routes */}
       </Routes>
       <Footer />
