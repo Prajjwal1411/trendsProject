@@ -22,7 +22,7 @@ import {
         <Box py={12} px={6} bg="black">
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={12}>
             <VStack fontFamily={"inherit"} align="start" spacing={5} >
-              <Text fontSize="8xl" fontWeight="normal" color="#b9ff38">
+              <Text fontSize="7xl" fontWeight="normal" color="#b9ff38">
                 Rethinking employee wellbeing
               </Text>
               <Text fontSize="1xl" color="white" mb={3}>

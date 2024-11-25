@@ -30,9 +30,9 @@ const Footer = () => {
           </div>
           <div className="footer-column">
             <h4 className="footer-header">Support</h4>
-            <a href="/" className="footer-item">Affiliate Program</a>
+            <a href="/affiliate" className="footer-item">Affiliate Program</a>
             <a href="/" className="footer-item">Careers</a>
-            <a href="/" className="footer-item">Blog</a>
+            <a href="/blog" className="footer-item">Blog</a>
           </div>
           <div className="footer-column">
             <h4 className="footer-header">Company</h4>

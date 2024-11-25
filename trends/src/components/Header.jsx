@@ -5,6 +5,7 @@
 import { Box, Flex, Image, Spacer, Button, IconButton, HStack, Link } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { useLocation } from "react-router-dom";
+import logo from "../media/logo.svg";
 
 export default function Header() {
   const location = useLocation(); 
@@ -26,16 +27,16 @@ export default function Header() {
 
         <HStack spacing={8} display={{ base: "none", md: "flex" }}>
           <Link
-            href="/"
-            fontWeight={location.pathname === "/" ? "bold" : "normal"} 
+            href="/for-business"
+            fontWeight={location.pathname === "/for-business" ? "bold" : "normal"}
             color="white"
             _hover={{ textDecoration: "none" }}
           >
-            Home
+            For Business
           </Link>
           <Link
             href="/blog"
-            fontWeight={location.pathname === "/blog" ? "bold" : "normal"} // Highlight "blog"
+            fontWeight={location.pathname === "/blog" ? "bold" : "normal"}
             color="white"
             _hover={{ textDecoration: "none" }}
           >
@@ -43,19 +44,11 @@ export default function Header() {
           </Link>
           <Link
             href="/affiliate"
-            fontWeight={location.pathname === "/affiliate" ? "bold" : "normal"} // Highlight "For FAQs"
+            fontWeight={location.pathname === "/affiliate" ? "bold" : "normal"}
             color="white"
             _hover={{ textDecoration: "none" }}
           >
             Affiliate Program
-          </Link>
-          <Link
-            href="/for-business"
-            fontWeight={location.pathname === "/for-business" ? "bold" : "normal"}
-            color="white"
-            _hover={{ textDecoration: "none" }}
-          >
-            For Business
           </Link>
           <Link
             href="/about-us"
@@ -73,9 +66,6 @@ export default function Header() {
           >
             FAQs
           </Link>
-          <Button size="sm" variant="link" color="white">
-            Privacy policy
-          </Button>
           <Button size="sm" variant="outline" color="white" borderColor="white">
             Log in
           </Button>

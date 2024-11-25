@@ -25,10 +25,10 @@ import {
 } from "react-icons/fa";
 
 export default function AboutUs() {
-  const bgColor = "black"; // Set background to black
-  const cardBgColor = "black"; // Set card background to black as well
-  const headerColor = "#00b5ad"; // Set header color to #00b5ad
-  const textColor = "white"; // Set text color to white
+  const bgColor = "black";
+  const cardBgColor = "black";
+  const headerColor = "#00b5ad";
+  const textColor = "white";
 
   return (
     <Box minH="100vh" bg={bgColor} color={textColor}>

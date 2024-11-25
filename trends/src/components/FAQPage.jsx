@@ -16,10 +16,10 @@ import {
 } from "@chakra-ui/react";
 
 export default function FAQPage() {
-  const bgColor = "black"; // Full black background
-  const textColor = useColorModeValue("white", "white"); // White text color
-  const accentColor = "#00b5ad"; // Accent color as per your original code
-  const buttonHoverBg = "#1e3a6d"; // Button hover background color
+  const bgColor = "black";
+  const textColor = useColorModeValue("white", "white");
+  const accentColor = "#00b5ad";
+  const buttonHoverBg = "#1e3a6d";
 
   const faqs = [
     {
