@@ -85,7 +85,7 @@ export default function Header() {
           >
             FAQs
           </Link>
-          <Button size="sm" variant="outline" color="white" borderColor="white">
+          <Button size="sm" variant="outline" color="white" borderColor="white" className="login-btn">
             Log in
           </Button>
         </HStack>
