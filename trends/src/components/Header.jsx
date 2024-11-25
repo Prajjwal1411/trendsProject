@@ -1,10 +1,13 @@
+// Created by Prajjwal Shukla (8910064)
+
+
+
 import { Box, Flex, Image, Spacer, Button, IconButton, HStack, Link } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { useLocation } from "react-router-dom"; // For React Router-based routing
-import logo from "../media/logo.svg";
+import { useLocation } from "react-router-dom";
 
 export default function Header() {
-  const location = useLocation(); // Get the current route path
+  const location = useLocation(); 
 
   return (
     <Box as="header" px={6} py={4} background="black" borderBottom="1px solid" borderColor="gray.700">
@@ -20,11 +23,11 @@ export default function Header() {
 
         <Spacer />
 
-        {/* Navigation Links */}
+
         <HStack spacing={8} display={{ base: "none", md: "flex" }}>
           <Link
             href="/"
-            fontWeight={location.pathname === "/" ? "bold" : "normal"} // Highlight "Product"
+            fontWeight={location.pathname === "/" ? "bold" : "normal"} 
             color="white"
             _hover={{ textDecoration: "none" }}
           >
@@ -48,7 +51,7 @@ export default function Header() {
           </Link>
           <Link
             href="/for-business"
-            fontWeight={location.pathname === "/for-business" ? "bold" : "normal"} // Highlight "For Business"
+            fontWeight={location.pathname === "/for-business" ? "bold" : "normal"}
             color="white"
             _hover={{ textDecoration: "none" }}
           >
@@ -56,7 +59,7 @@ export default function Header() {
           </Link>
           <Link
             href="/about-us"
-            fontWeight={location.pathname === "/about-us" ? "bold" : "normal"} // Highlight "For About us"
+            fontWeight={location.pathname === "/about-us" ? "bold" : "normal"} 
             color="white"
             _hover={{ textDecoration: "none" }}
           >
@@ -64,7 +67,7 @@ export default function Header() {
           </Link>
           <Link
             href="/faq"
-            fontWeight={location.pathname === "/faq" ? "bold" : "normal"} // Highlight "For FAQs"
+            fontWeight={location.pathname === "/faq" ? "bold" : "normal"}
             color="white"
             _hover={{ textDecoration: "none" }}
           >
@@ -78,7 +81,6 @@ export default function Header() {
           </Button>
         </HStack>
 
-        {/* Hamburger Menu for Mobile */}
         <IconButton
           aria-label="Menu"
           icon={<HamburgerIcon />}
