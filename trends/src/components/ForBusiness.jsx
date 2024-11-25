@@ -1,3 +1,5 @@
+// Created By Prajjwal Shukla(8910064)
+
 import {
     Box,
     Flex,
@@ -17,7 +19,6 @@ import {
     return (
       <Box>
   
-        {/* Hero Section */}
         <Box py={12} px={6} bg="black">
           <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={12}>
             <VStack fontFamily={"inherit"} align="start" spacing={5} >
@@ -38,7 +39,7 @@ import {
           </Grid>
         </Box>
   
-        {/* Statistics Section */}
+   
         <Box py={12} px={6}>
           <Text fontSize="2xl" fontWeight="bold" textAlign="center" mb={6}>
             Why now is the time to invest in team's health?
@@ -55,9 +56,9 @@ import {
       src="https://blog.taxact.com/wp-content/uploads/6-Reasons-to-File-a-Tax-Extension-434324557_Blog.jpg"
       alt="Hero Image"
       borderRadius="0px 0px 20px 20px"
-      boxSize="200px" // Uniform image size
-      objectFit="cover" // Ensures the image fills the box
-      width="100%" // Makes image stretch to match the box
+      boxSize="200px" 
+      objectFit="cover"
+      width="100%" 
     />
   </Box>
 
@@ -98,7 +99,6 @@ import {
 
         </Box>
   
-        {/* Features Section */}
         <Box py={12} px={6} bg="black" color={"white"}>
 
             <Text fontSize="3xl" fontWeight="bold" mb={4} textAlign={"center"} >
@@ -150,8 +150,7 @@ import {
 </Grid>
 
         </Box>
-  
-        {/* Testimonials Section */}
+
         <Box py={12} px={6}>
           <Text fontSize="4xl" fontWeight="bold" textAlign="center" mb={10}>
             See who's talking about us

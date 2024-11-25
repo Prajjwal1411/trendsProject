@@ -20,11 +20,11 @@ export default function Header() {
 
         <Spacer />
 
-        {/* Navigation Links */}
+
         <HStack spacing={8} display={{ base: "none", md: "flex" }}>
           <Link
             href="/"
-            fontWeight={location.pathname === "/" ? "bold" : "normal"} // Highlight "Product"
+            fontWeight={location.pathname === "/" ? "bold" : "normal"} 
             color="white"
             _hover={{ textDecoration: "none" }}
           >
@@ -32,7 +32,7 @@ export default function Header() {
           </Link>
           <Link
             href="/product"
-            fontWeight={location.pathname === "/product" ? "bold" : "normal"} // Highlight "Product"
+            fontWeight={location.pathname === "/product" ? "bold" : "normal"}
             color="white"
             _hover={{ textDecoration: "none" }}
           >
@@ -40,7 +40,7 @@ export default function Header() {
           </Link>
           <Link
             href="/for-business"
-            fontWeight={location.pathname === "/for-business" ? "bold" : "normal"} // Highlight "For Business"
+            fontWeight={location.pathname === "/for-business" ? "bold" : "normal"}
             color="white"
             _hover={{ textDecoration: "none" }}
           >
@@ -48,7 +48,7 @@ export default function Header() {
           </Link>
           <Link
             href="/about-us"
-            fontWeight={location.pathname === "/about-us" ? "bold" : "normal"} // Highlight "For About us"
+            fontWeight={location.pathname === "/about-us" ? "bold" : "normal"} 
             color="white"
             _hover={{ textDecoration: "none" }}
           >
@@ -56,7 +56,7 @@ export default function Header() {
           </Link>
           <Link
             href="/faq"
-            fontWeight={location.pathname === "/faq" ? "bold" : "normal"} // Highlight "For FAQs"
+            fontWeight={location.pathname === "/faq" ? "bold" : "normal"}
             color="white"
             _hover={{ textDecoration: "none" }}
           >
@@ -70,7 +70,6 @@ export default function Header() {
           </Button>
         </HStack>
 
-        {/* Hamburger Menu for Mobile */}
         <IconButton
           aria-label="Menu"
           icon={<HamburgerIcon />}
